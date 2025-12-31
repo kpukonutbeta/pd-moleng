@@ -1,34 +1,66 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* App-specific styles */
+
+.login-bg {
+    background-image: url('https://images.unsplash.com/photo-1763568321672-f0e25b0daa6a?crop=entropy&cs=srgb&fm=jpg&q=85');
+    background-size: cover;
+    background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.btn-primary {
+    @apply bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm transition-all duration-200;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.btn-secondary {
+    @apply bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-medium transition-all duration-200;
 }
 
-.App-link {
-    color: #61dafb;
+.btn-destructive {
+    @apply bg-red-600 hover:bg-red-700 text-white transition-all duration-200;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.card-hover {
+    @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200 rounded-lg;
+}
+
+.input-field {
+    @apply border-slate-300 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 rounded-md transition-all duration-200;
+}
+
+.label-field {
+    @apply text-sm font-medium text-slate-700 mb-1.5 block;
+}
+
+.table-header {
+    @apply bg-slate-50 text-slate-600 font-semibold uppercase tracking-wider text-xs border-b border-slate-200;
+}
+
+.table-row {
+    @apply border-b border-slate-100 hover:bg-slate-50/50 transition-colors duration-150;
+}
+
+.badge-draft {
+    @apply bg-slate-100 text-slate-700 border border-slate-200;
+}
+
+.badge-completed {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+}
+
+/* Sidebar styles */
+.sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors duration-150;
+}
+
+.sidebar-link.active {
+    @apply bg-emerald-50 text-emerald-700 font-medium;
+}
+
+/* Glass effect for header */
+.glass-header {
+    @apply backdrop-blur-md bg-white/80 border-b border-slate-200/50 sticky top-0 z-50;
+}
+
+/* Currency input */
+.currency-input {
+    font-family: 'JetBrains Mono', monospace;
 }
