@@ -1,0 +1,164 @@
+{
+  "identity": {
+    "name": "E1 - The Official",
+    "archetype": "Swiss & High-Contrast (with Organic touches)",
+    "mission": "Create a travel log application that feels like a modern, efficient government tool. Trustworthy, clear, and authoritative but not boring.",
+    "tone": "Professional, Formal, Efficient, Transparent"
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope",
+      "weights": ["600", "700", "800"],
+      "usage": "Page titles, Section headers, Modal titles"
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "weights": ["400", "500"],
+      "usage": "Form labels, Table data, Paragraphs"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "usage": "Reference numbers (NIP, SPPD Number), Currency values in tables"
+    }
+  },
+  "colors": {
+    "primary": {
+      "name": "Emerald Official",
+      "hex": "#047857",
+      "tailwind": "emerald-700",
+      "usage": "Primary buttons, Active states, Brand identity"
+    },
+    "secondary": {
+      "name": "Slate Authority",
+      "hex": "#0F172A",
+      "tailwind": "slate-900",
+      "usage": "Headings, Sidebar background, Strong borders"
+    },
+    "accent": {
+      "name": "Golden State",
+      "hex": "#B45309",
+      "tailwind": "amber-700",
+      "usage": "Pending status, Important alerts, Highlights"
+    },
+    "background": {
+      "main": "#F8FAFC",
+      "card": "#FFFFFF",
+      "sidebar": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#64748B",
+      "muted": "#94A3B8"
+    },
+    "status": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "layout": {
+    "grid_system": "Control Room Grid",
+    "spacing": {
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "section_gap": "gap-6",
+      "component_gap": "gap-4"
+    },
+    "radius": {
+      "default": "rounded-md",
+      "card": "rounded-lg",
+      "button": "rounded-md"
+    },
+    "shadows": {
+      "card": "shadow-sm hover:shadow-md transition-shadow",
+      "dropdown": "shadow-lg",
+      "modal": "shadow-2xl"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-emerald-700 hover:bg-emerald-800 text-white font-medium shadow-sm",
+      "secondary": "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 font-medium",
+      "ghost": "hover:bg-slate-100 text-slate-600",
+      "destructive": "bg-red-600 hover:bg-red-700 text-white"
+    },
+    "cards": {
+      "style": "bg-white border border-slate-200 shadow-sm rounded-lg",
+      "header": "border-b border-slate-100 p-4",
+      "content": "p-4"
+    },
+    "inputs": {
+      "style": "border-slate-300 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 rounded-md",
+      "label": "text-sm font-medium text-slate-700 mb-1.5 block"
+    },
+    "tables": {
+      "style": "w-full text-sm text-left",
+      "header": "bg-slate-50 text-slate-600 font-semibold uppercase tracking-wider border-b border-slate-200",
+      "row": "border-b border-slate-100 hover:bg-slate-50/50 transition-colors",
+      "cell": "p-4 align-middle"
+    },
+    "badges": {
+      "draft": "bg-slate-100 text-slate-700 border border-slate-200",
+      "submitted": "bg-blue-50 text-blue-700 border border-blue-200",
+      "approved": "bg-emerald-50 text-emerald-700 border border-emerald-200",
+      "rejected": "bg-red-50 text-red-700 border border-red-200"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-md bg-white/80 border-b border-slate-200/50 sticky top-0 z-50",
+    "gradients": "None. Use solid colors and subtle textures.",
+    "textures": "Subtle noise overlay on the sidebar or login background to reduce digital flatness.",
+    "icons": "Lucide React (Clean, consistent stroke width)"
+  },
+  "pages": {
+    "login": {
+      "layout": "Split Screen",
+      "left_panel": "Image with overlay and quote/branding",
+      "right_panel": "Clean form centered",
+      "image_url": "https://images.unsplash.com/photo-1763568321672-f0e25b0daa6a?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "dashboard": {
+      "layout": "Sidebar + Topbar + Content Area",
+      "widgets": [
+        "Stats Overview (Active Trips, Total Expense, Pending Reports)",
+        "Recent Trips Table",
+        "Quick Actions (Create New Trip)"
+      ],
+      "banner_image": "https://images.unsplash.com/photo-1637216461875-8307722ee8d8?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "trip_detail": {
+      "layout": "Tabs (Overview, Itinerary, Expenses, Documents)",
+      "header": "Trip Title, Status Badge, Date Range, Action Buttons",
+      "content": "Bento Grid layout for details"
+    },
+    "report_preview": {
+      "layout": "WYSIWYG Document Preview",
+      "style": "A4 aspect ratio container, white background, drop shadow, print styles",
+      "features": "Export to PDF, Export to Excel buttons floating or in toolbar"
+    }
+  },
+  "image_urls": {
+    "login_bg": "https://images.unsplash.com/photo-1763568321672-f0e25b0daa6a?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "dashboard_banner": "https://images.unsplash.com/photo-1637216461875-8307722ee8d8?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "placeholder_avatar": "https://ui.shadcn.com/avatars/01.png"
+  },
+  "instructions_to_main_agent": [
+    "Use 'Manrope' for all headings and 'IBM Plex Sans' for body text. Import them via Google Fonts in index.css.",
+    "Implement a strict 'Light Mode' only. Do not add dark mode toggles.",
+    "Use the 'Emerald Official' color palette. Primary buttons must be Emerald-700.",
+    "For the 'Report Preview' page, create a visual representation of an A4 paper sheet using CSS (width: 210mm; min-height: 297mm; padding: 20mm; bg-white; shadow-lg; margin: auto).",
+    "Ensure all forms have validation feedback (red text, red border).",
+    "Use 'sonner' for all toast notifications.",
+    "All currency inputs must auto-format to Indonesian Rupiah (IDR) e.g., 'Rp 1.500.000'.",
+    "The 'Itinerary' section should group items by Date.",
+    "The 'Expense' section must have a running total at the bottom.",
+    "Add 'data-testid' to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Every interaction needs micro-animations.",
+    "Never use AI assistant Emoji characters."
+  ]
+}
